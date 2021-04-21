@@ -1,0 +1,15 @@
+{% block content %}
+<p><h3 style="
+    padding-left: 10px;
+">Добавить товар</h3></p>
+<form method="post" action="{% url 'goods:create' %}" class="js-good-create-form">
+    {% csrf_token %}
+    <div class="modal-body">
+        {% include "goods/form.html" %}
+    </div>
+    <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Отмена</button>
+        <button type="submit" class="btn btn-primary">Добавить товар</button>
+    </div>
+</form>
+{% endblock %}
