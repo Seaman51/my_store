@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% block title %}Список товаров{% endblock %}
+{% block content %}
+
+<div id="good-table tbody">
+{% include "goods/partial_goods_list.html" %}
+</div>
+
+<div style="margin-top: 30px;">
+    <button type="button" class="btn btn-info" id="js-button-add" data-url="{% url 'goods:create' %}">Добавить товар</button>
+</div>
+
+<div class="modal fade" id="modal-good">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
